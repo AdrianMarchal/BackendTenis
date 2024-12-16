@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = require('./v1/routes/tenis_rutas')
+const cors = require('cors')
 
 const app = express()
 app.use(express.json())
