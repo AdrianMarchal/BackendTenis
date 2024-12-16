@@ -47,6 +47,7 @@ const getPartidoFinalizados = async () => {
 }
 
 const patchPartidoFinalizados = async (id ,partido) => {
+    console.log(partido)
     await axios.patch(url+"partidosPendientes/"+id+".json",partido)
 }
 

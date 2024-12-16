@@ -3,7 +3,7 @@ const adaptador = require('../dataBase/adaptadorTenis')
 const getPartidosPendientes = async (req, res) => {
     try{
         const partidos = await adaptador.getPartidosPendientes()
-        console.log(partidos)
+        
         res.status(200).send({status: "OK", data: Object.fromEntries(partidos)})
     }catch(error){
         res.status(error.status || 500).send({status: "FAILED", message: error.message})
@@ -13,7 +13,7 @@ const getPartidosPendientes = async (req, res) => {
 const getPartidosFinalizados = async (req, res) => {
     try{
         const partidos = await adaptador.getPartidoFinalizados()
-        console.log(partidos)
+        
         res.status(200).send({status: "OK", data: Object.fromEntries(partidos)})
     }catch(error){
         res.status(error.status || 500).send({status: "FAILED", message: error.message})
